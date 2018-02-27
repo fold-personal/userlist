@@ -1,6 +1,3 @@
-# Specifies intentionally untracked files to ignore when using Git
-# http://git-scm.com/docs/gitignore
-
 *~
 *.sw[mnpcod]
 *.log
@@ -12,6 +9,8 @@ log.txt
 .vscode/
 npm-debug.log*
 
+.env
+.ENV
 .idea/
 .sourcemaps/
 .sass-cache/
@@ -23,16 +22,16 @@ node_modules/
 tmp/
 temp/
 hooks/
+plugins/
 platforms/*
 !platforms/browser/
 !platforms/browser/www
 !platforms/browser/www/plugins
 platforms/browser/www/.gitignore
-plugins/
 plugins/android.json
 plugins/ios.json
-www/
 $RECYCLE.BIN/
+platforms/browser/cordova/*
 
 .DS_Store
 Thumbs.db
