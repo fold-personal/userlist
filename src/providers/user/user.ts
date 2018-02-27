@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
 
-const API_URL= 'http://jsonplaceholder.typicode.com/'
+const API_URL= 'https://jsonplaceholder.typicode.com/'
 const USERS_ENDPOINT = 'users';
 
 @Injectable()
