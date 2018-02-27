@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <!-- <button ion-button (click)="onBackClick()">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+    </button> -->
+    <ion-buttons left>
+      <button ion-button (click)="onBackClick()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      {{user.username}}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          Name: {{user.name}}
+        </ion-item>
+        <ion-item>
+          Phone: {{user.phone}}
+        </ion-item>
+        <ion-item>
+          Email: {{user.email}}
+        </ion-item>
+        <ion-item>
+          Site:
+          <a href="http://{{user.website}}">{{user.website}}</a>
+        </ion-item>
+      </ion-list>
+      <ion-card *ngIf="user.address">
+        <ion-card-header>
+          User Address
+        </ion-card-header>
+        <ion-card-content>
+          {{user.address.city}} {{user.address.street}} {{user.address.suite}}, {{user.address.zipcode}}
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="user.company">
+        <ion-card-header>
+          {{user.company.name}}
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{user.company.catchPhrase}}</p>
+          <p>{{user.company.bs}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

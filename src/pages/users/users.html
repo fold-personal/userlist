@@ -1,0 +1,36 @@
+<!--
+  Generated template for the UsersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Users</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let user of usersData" (click)="onUserClicked(user)">
+    <ion-card-header>
+      {{user.username}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          Name: {{user.name}}
+        </ion-item>
+        <ion-item>
+          Phone: {{user.phone}}
+        </ion-item>
+        <ion-item>
+          Site: <a href="http://{{user.website}}">{{user.website}}</a>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
